@@ -1,5 +1,6 @@
 import { galleryImg } from './picUrl.js';
 import Refs from './refs';
+
 // Modal
 Refs.innerList.addEventListener('click', event => {
     if (event.target === event.currentTarget) {
