@@ -125,9 +125,11 @@ li {
   }
 }
 
-// .header__list-item:hover {
-//   background: #dfd8d8;
-// }
+@media (max-width: 767px) {
+  .header__list-item:hover {
+    background: #dfd8d8;
+  }
+}
 
 @media (min-width: 768px) {
   .header__container {
