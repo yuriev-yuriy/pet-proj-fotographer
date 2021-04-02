@@ -3,7 +3,11 @@ import Refs from './refs';
 
 // Modal
 Refs.innerList.addEventListener('click', event => {
-    if (event.target === event.currentTarget) {
+    if (window.screen.width <= 768) {
+        openSwipeModal(event)
+        return
+    }
+    else if (event.target === event.currentTarget) {
     return
 }
        Refs.modalImgRef.src = event.target.src;
@@ -17,6 +21,13 @@ const handleKeyDown = (event) => {
     if (event.code === 'Escape') {
         closeModal()
     }
+}
+function openSwipeModal(event) {
+Refs.modalRef.classList.add('Modal');
+    Refs.overlayRef.classList.add('showModal');
+    window.addEventListener('keydown', handleKeyDown);
+    Refs.swipeTopRef.classList.remove('hiden');
+    Refs.svipeBottomRef.classList.remove('hiden');
 }
 let idN;
 function openModal(event) {
@@ -63,7 +74,9 @@ function closeModal() {
     Refs.btnPrev.removeEventListener('click', onForward);
     Refs.btnNext.removeAttribute("disabled", "disabled");
     Refs.btnPrev.removeAttribute("disabled", "disabled");
-        Refs.modalImgRef.src = '';
+    Refs.modalImgRef.src = '';
+    Refs.swipeTopRef.classList.add('hiden');
+    Refs.svipeBottomRef.classList.add('hiden');
     }
 
 function onOverlayClick() {
@@ -72,4 +85,4 @@ function onOverlayClick() {
     }
 }
 
-export {openModal, closeModal, handleKeyDown, onOverlayClick, setForward, onForward, onBackward};
+export {openModal, closeModal, handleKeyDown, onOverlayClick, setForward, onForward, onBackward, openSwipeModal};

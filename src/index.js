@@ -1,6 +1,6 @@
 import './sass/style.scss';
 import './js/main';
 import './js/picUrl';
-// import './js/modal';
+import './js/modal';
 import './js/refs'
-import './js/modal1';
+import './js/swiper'

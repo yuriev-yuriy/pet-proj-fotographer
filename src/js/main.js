@@ -1,5 +1,5 @@
 'use strict';
-// import {galleryImg} from './picUrl.js';
+import {galleryImg} from './picUrl.js';
 import Refs from './refs';
 
 export default
@@ -34,12 +34,12 @@ galleryImg.forEach(img => {
    return innerImg
 })
 
-//  galleryImg.forEach(img => {
-//             let idx = 0
-//             Refs.innerList.insertAdjacentHTML('beforeend', `<img class="main__inner-img" id=${idx} src=${img} alt="">`)
-//             const innerImg = document.querySelectorAll('.main__inner-img');
-//             innerImg.forEach(img => img.setAttribute('id', idx++))
+ galleryImg.forEach(img => {
+            let idx = 0
+            Refs.innerList.insertAdjacentHTML('beforeend', `<img class="main__inner-img" id=${idx} src=${img} alt="">`)
+            const innerImg = document.querySelectorAll('.main__inner-img');
+            innerImg.forEach(img => img.setAttribute('id', idx++))
 
-//             return innerImg
-//         }
-//         )
+            return innerImg
+        }
+        )
