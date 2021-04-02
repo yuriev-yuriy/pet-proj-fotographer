@@ -10,10 +10,13 @@ const Refs = {
      innerImg : document.querySelectorAll('.main__inner-img'),
      innerTitle : document.querySelector('.main__inner-title'),
      innerBtn : document.querySelector('.main__inner-btn'),
-     overlayRef : document.querySelector('.Overlay'),
-     modalRef : document.querySelector('.Modal'),
+     overlayRef: document.querySelector('.Overlay'),
+     overlayRef1 : document.querySelector('.Overlay1'),
+     modalRef: document.querySelector('.Modal'),
+     modalRef1: document.querySelector('.Modal1'),
      modalImgRef : document.querySelector('.modal__img'),
      btnNext : document.querySelector('.modal__btn--next'),
-     btnPrev : document.querySelector('.modal__btn--prev'),
+     btnPrev: document.querySelector('.modal__btn--prev'),
+     svipeRef: document.querySelector('.slider'),
 }
 export default Refs;
